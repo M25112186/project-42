@@ -199,7 +199,7 @@ function reset(){
   restart.visible = false;
   kangaroo.visible = true;
   //change animation of the kangaroo
-  kangaroo_running =   addAnimation("assets/kangaroo1.png","assets/kangaroo2.png","assets/kangaroo3.png");
+  obstaclesGroup.isTouching(kangaroo);
   //destroy the shrubs and obstacle group
   shrubsGroup.destroyEach();
   obstaclesGroup.destroyEach();
