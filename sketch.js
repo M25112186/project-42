@@ -89,7 +89,7 @@ function draw() {
 
     kangaroo.collide(invisibleGround);
     //write a condition for gamestate should end.
-    if(gameState === 2){
+    if(obstaclesGroup.isTouching(kangaroo){
       collidedSound.play();
       gameState = END;
     }
@@ -199,7 +199,7 @@ function reset(){
   restart.visible = false;
   kangaroo.visible = true;
   //change animation of the kangaroo
-  obstaclesGroup.isTouching(kangaroo);
+  kangaroo.changeAnimation("running", kangaroo_running);
   //destroy the shrubs and obstacle group
   shrubsGroup.destroyEach();
   obstaclesGroup.destroyEach();
